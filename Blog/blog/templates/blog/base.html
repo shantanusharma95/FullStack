@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+
+        <!-- Bootstrap -->
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Medium Style Editor -->
+        <!-- Got this from http://yabwe.github.io/medium-editor/ -->
+        <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Fredoka+One&display=swap" rel="stylesheet">
+
+    </head>
+    <body>  
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-default techfont custom-navbar">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a class='navbar-brand bigbrand' href="{% url 'post_list' %}">My Blog</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="https://www.github.com">Github</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                </ul>
+
+                <ul class='nav navbar-nav navbar-right'>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'post_new'%}">New Post</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'post_draft_list'%}">Drafts</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout'%}">Log Out</a>
+                    </li>
+                    <li>
+                        <a>Welcome: {{user.username }}</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a class='nav navbar-right' href="{% url 'login' %}"><span class='glyphicon glyphicon-user'></span></a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Content Block -->
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog_posts">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+<!-- <h1>Loading...</h1>
+
+<div class="loader loader--style8" title="7">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+    <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+      <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+      <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+      <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+    <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+      <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+      <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+      <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+    <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+      <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+      <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+      <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+  </svg>
+</div> -->
