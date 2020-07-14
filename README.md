@@ -14,3 +14,19 @@ Below is a short summary of each directory in this repo. Each directory contains
    This is a tic tac toe game replica. Created with basic html and css - but here I have used DOM in the .js file, to interact with the HTML elements.
  
    DOM (document object model) is like an interface that allows JavaScript to work with the HTML and CSS elements
+   
+3. #### FourDots
+   This is a 2 player-game, where the player filling 4 horizontal or vertical dots consecutively, wins.
+   
+   Here I have used more of jQuery - jQuery is a huge JavaScript library, which makes it easier to interact with the HTML tags/code!
+   The functionality of this game can be achieved in more easier ways though!
+   
+4. #### Blog
+   This project is developed with Python, using the Django framework and the built-in SQL installation it comes with.
+   
+   A user can create a blog post, publish it or save as draft. Other users can also drop/delete comments on blog posts. This is a basic blog project in a nutshell.
+   
+   Django is a Model-Template-View based framework, and I have included all the files created by me and the pre-existing files modified by me, which are generated when you first
+   set up a basic Django application.
+   
+
