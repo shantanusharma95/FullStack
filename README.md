@@ -21,7 +21,14 @@ Below is a short summary of each directory in this repo. Each directory contains
    Here I have used more of jQuery - jQuery is a huge JavaScript library, which makes it easier to interact with the HTML tags/code!
    The functionality of this game can be achieved in more easier ways though!
    
-4. #### Blog
+4. #### GenderAPI
+   This is a simple web page calling a gender predicting API, where I pass the name of the user (taken as an input) and display the gender and probability of the same
+   as received in response.
+   
+   I have made use of **async** function to enable the use of **await** making an asynchronous function work like a synchronous one.
+   You can read more about why **async** and **await** form a good pair on [this page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+   
+5. #### Blog
    This project is developed with Python, using the Django framework and the built-in SQL installation it comes with.
    
    A user can create a blog post, publish it or save as draft. Other users can also drop/delete comments on blog posts. This is a basic blog project in a nutshell.
