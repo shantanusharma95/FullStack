@@ -21,14 +21,25 @@ Below is a short summary of each directory in this repo. Each directory contains
    Here I have used more of jQuery - jQuery is a huge JavaScript library, which makes it easier to interact with the HTML tags/code!
    The functionality of this game can be achieved in more easier ways though!
    
-4. #### GenderAPI
+4. #### ToDo App
+   This is a basic to-do list, created using JavaScript, HTML and CSS.
+   
+   User can:
+   * add a new list item
+   * remove an item
+   * mark an item as complete
+   * clear entire list
+   
+   The list lasts for the current session, and is not saved in DB or file.
+
+5. #### GenderAPI
    This is a simple web page calling a gender predicting API, where I pass the name of the user (taken as an input) and display the gender and probability of the same
    as received in response.
    
    I have made use of **async** function to enable the use of **await** making an asynchronous function work like a synchronous one.
    You can read more about why **async** and **await** form a good pair on [this page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
    
-5. #### Blog
+6. #### Blog
    This project is developed with Python, using the Django framework and the built-in SQL installation it comes with.
    
    A user can create a blog post, publish it or save as draft. Other users can also drop/delete comments on blog posts. This is a basic blog project in a nutshell.
